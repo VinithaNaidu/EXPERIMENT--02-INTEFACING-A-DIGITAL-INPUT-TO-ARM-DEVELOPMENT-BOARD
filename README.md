@@ -1,6 +1,8 @@
 # EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD
-## Aim: To Interface a Digital Input  (userpush button  ) to ARM   development board and write a  program to obtain  the data and flash the led  
-## Components required: STM32 CUBE IDE, ARM IOT development board,  STM programmer tool.
+## Aim:
+To Interface a Digital Input  (userpush button  ) to ARM   development board and write a  program to obtain  the data and flash the led  
+## Components required:
+STM32 CUBE IDE, ARM IOT development board,  STM programmer tool.
 ## Theory 
 The full form of an ARM is an advanced reduced instruction set computer (RISC) machine, and it is a 32-bit processor architecture expanded by ARM holdings. The applications of an ARM processor include several microcontrollers as well as processors. The architecture of an ARM processor was licensed by many corporations for designing ARM processor-based SoC products and CPUs. This allows the corporations to manufacture their products using ARM architecture. Likewise, all main semiconductor companies will make ARM-based SOCs such as Samsung, Atmel, TI etc.
 
@@ -17,7 +19,9 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 ![image](https://user-images.githubusercontent.com/36288975/226189280-ed5dcf1d-dd8d-43ae-815d-491085f4863b.png)
 
-4.select the program name 
+ 4.select the program name
+
+ 
 ![image](https://user-images.githubusercontent.com/36288975/226189316-09832a30-4d1a-4d4f-b8ad-2dc28f137711.png)
 
 
@@ -51,13 +55,50 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 
 ## STM 32 CUBE PROGRAM :
+```
+NAME : SHARAN MJ
+REG NO: 212222240097
+```
+```
+#include "main.h"
+#include"stdbool.h"
+bool pushbutton;
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  while (1)
+  {
+	  pushbutton=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_13);
+	  	  	  	  if(pushbutton==0){
+	  	  	  		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_SET);
+	  	  	  		  HAL_Delay(2000);
+	  	  	  		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
+	  	  	  		  HAL_Delay(2000);
+	  	  	  	  }
+	  	  	  	  else{
+	  	  	  		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
+	  	  	  		  HAL_Delay(2000);
+	  	  	  	  }
+  }
+}
 
-
+```
 
 ## Output  :
- 
- 
- 
- 
+
+
+  ## STM32 BOARD ON
+ ![exp2image](https://github.com/Jerushli/EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD/assets/120041243/bac451d7-1d8d-47bd-863c-1f17d8acc47a)
+
+
+  ## STM32 BOARD OFF
+  ![POtti OFFFFF](https://github.com/Jerushli/EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD/assets/120041243/a9e63239-bef8-4ea0-a7f9-acd5790a8d29)
+
+
+
 ## Result :
 Interfacing a digital Input (Pushbutton ) with ARM microcontroller based IOT development is executed and the results are verified.
