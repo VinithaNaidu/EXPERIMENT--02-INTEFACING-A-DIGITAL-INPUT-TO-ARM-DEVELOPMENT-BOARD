@@ -55,11 +55,11 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 
 ## STM 32 CUBE PROGRAM :
+``` 
+NAME : D.VINITHA
+REG NO: 212222230175
 ```
-NAME : SHARAN MJ
-REG NO: 212222240097
-```
-```
+``` C
 #include "main.h"
 #include"stdbool.h"
 bool pushbutton;
@@ -91,14 +91,16 @@ int main(void)
 ## Output  :
 
 
-  ## STM32 BOARD ON
- ![exp2image](https://github.com/Jerushli/EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD/assets/120041243/bac451d7-1d8d-47bd-863c-1f17d8acc47a)
 
 
-  ## STM32 BOARD OFF
-  ![POtti OFFFFF](https://github.com/Jerushli/EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD/assets/120041243/a9e63239-bef8-4ea0-a7f9-acd5790a8d29)
 
 
+  ## LED OFF
+![pmc 2](https://github.com/MukeshVelmurugan/EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD/assets/118707363/cbf61065-dba6-472e-9134-b42dc5007aaa)
+
+  ## LED ON
+  
+![pmc 22](https://github.com/MukeshVelmurugan/EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD/assets/118707363/9805b835-1b0c-401e-9be4-39e26093acca)
 
 ## Result :
 Interfacing a digital Input (Pushbutton ) with ARM microcontroller based IOT development is executed and the results are verified.
